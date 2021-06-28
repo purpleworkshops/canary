@@ -14,7 +14,7 @@ This app started as a Rails 6.1.4 with `rails new canary -d postgresql` and then
 * Added `app/workers/message_worker.rb` as a Sidekiq worker
 * Added `db/migrate/...create_messages.rb` as a migration to create the `messages` table
 * Added `Procfile` for use with Heroku and other similar tools.
-* Added `Procfile.dev` to start Puma, Sidekiq, and Redis together (`heroku local -f Procfile.dev` the `Ctrl-C` twice to quit)
+* Added `Procfile.dev` to start Puma, Sidekiq, and Redis together (`heroku local -f Procfile.dev` then use `Ctrl-C` twice to quit)
 
 ### Prerequisites
 
