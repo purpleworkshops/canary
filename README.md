@@ -18,7 +18,7 @@ This app started as a Rails 6.1.4 with `rails new canary -d postgresql` and then
 
 ### Prerequisites
 
-You will need `redis >= 6.0` installed.
+You will need Redis and Postgres installed and running as local services.
 
 ### Starting The App
 
