@@ -1,0 +1,8 @@
+<h1>Canary</h1>
+
+<p>
+  <%= form_tag messages_path(answer: @sum.to_s.reverse) do %>
+    <p>What is <%= @n1 %> + <%= @n2 %>?</p>
+    <%= text_field_tag :sum %>
+    <%= submit_tag "Send" %>
+  <% end %>
