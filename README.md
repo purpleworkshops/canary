@@ -10,7 +10,7 @@ This app started as a Rails 6.1.4 with `rails new canary -d postgresql` and then
 * Added gem 'twilio-ruby'
 * Added gem 'dotfile-rails'
 * Added `app/models/message.rb` as a very simple database-backed model
-* Added `app/services/TwilioService.rb` to send text messages
+* Added `app/services/twilio_service.rb` to send text messages
 * Added `app/workers/message_worker.rb` as a Sidekiq worker
 * Added `db/migrate/...create_messages.rb` as a migration to create the `messages` table
 * Added `Procfile` for use with Heroku and other similar tools.
