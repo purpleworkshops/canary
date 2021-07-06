@@ -7,3 +7,8 @@
 web: ./.eyk/sparkplug.sh && bundle exec rails server -b 0.0.0.0 -p 5000
 #migration: ./.eyk/migrations/db-migrate.sh
 #cronenberg: cronenberg ./.eyk/cronenberg/cron-jobs.yml
+
+# From Jeff's original
+# web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-production}
+# release: rails db:migrate
+worker: bundle exec sidekiq
