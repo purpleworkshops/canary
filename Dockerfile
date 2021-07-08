@@ -28,12 +28,15 @@ ARG db_yml_database
 ARG db_yml_username
 ARG db_yml_password
 ARG db_yml_host
+ARG SECRET_KEY_BASE
 
 # Replace selected raw config with equivalents designed for use with
 # your cluster. You can edit the source files as necessary. Particularly,
 # you might want to change the environment specified in these files.
 RUN erb -T - ./.eyk/config/database.yml.erb > config/database.yml
 RUN erb -T - ./.eyk/config/sidekiq.yml.erb > config/sidekiq.yml
+# RUN erb -T - ./.eyk/config/secret_key_base.rb.erb > config/initializers/secret_key_base.rb
+RUN erb -T - ./.eyk/config/secrets.yml.erb > config/secrets.yml
 
 # Make the migration script runable
 RUN chmod +x ./.eyk/migrations/db-migrate.sh
